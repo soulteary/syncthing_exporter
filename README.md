@@ -58,13 +58,13 @@ Example of grafana dashboard:
 ## Docker support
 How to run
 ```
-docker run -it -e "SYNCTHING_URI=http://127.0.0.1:8384/" -e SYNCTHING_TOKEN="super-secure-token" f100024/syncthing_exporter:latest
+docker run -it -e "SYNCTHING_URI=http://127.0.0.1:8384/" -e SYNCTHING_TOKEN="super-secure-token" soulteary/syncthing-exporter
 ```
 
 docker-compose example:
 ```
   syncthing_exporter:
-    image: f100024/syncthing_exporter:latest
+    image: soulteary/syncthing-exporter
     ports:
       - 9093:9093
     environment:
