@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  syncthing-exporter:
+    image: soulteary/syncthing-exporter
+    container_name: syncthing-exporter
+    ports:
+      - 9093:9093
+    expose:
+      - 9093
+    restart: always
+    environment:
+      SYNCTHING_URI: "http://YOUR_SYNCTHING_APP_URL:8384/"
+      SYNCTHING_TOKEN: "YOUR_SYNCTHING_API"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
